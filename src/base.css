@@ -1,0 +1,50 @@
+:root {
+  --color-scheme-mode: light;
+}
+html {
+  color-scheme: var(--color-scheme-mode);
+  font-family: var(--md-)
+}
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font: var(--md-sys-typescale-body-large);
+  letter-spacing: var(--md-sys-typescale-body-large-letter-spacing);
+}
+
+h1 {
+  font: var(--md-sys-typescale-display-large);
+  letter-spacing: var(--md-sys-typescale-display-large-letter-spacing);
+}
+
+h2 {
+  font: var(--md-sys-typescale-title-large);
+  letter-spacing: var(--md-sys-typescale-title-large-letter-spacing);
+}
+
+h3 {
+  font: var(--md-sys-typescale-title-medium);
+  letter-spacing: var(--md-sys-typescale-title-medium-letter-spacing);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 88px 1fr;
+  grid-template-areas:
+    "nav header"
+    "nav main";
+  align-items: start;
+
+  .main-header {
+    grid-area: header;
+  }
+
+  .nav-rail {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    block-size: 100vh;
+  }
+
+}

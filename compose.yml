@@ -1,0 +1,12 @@
+services:
+  node:
+    build: .
+    working_dir: /app
+    ports:
+      - published: 5173
+        target: 5173
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    command: ["pnpm", "dev"]

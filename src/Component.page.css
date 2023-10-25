@@ -1,0 +1,26 @@
+@import "./tokens.css";
+@import "./reset.css" layer(reset);
+@import "./base.css" layer(base);
+
+@layer reset, base, page;
+
+@layer page {
+  main.component {
+    margin: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap:wrap;
+  }
+
+  .checkboxWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .radioSample {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+}

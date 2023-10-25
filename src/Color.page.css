@@ -1,0 +1,61 @@
+@import "./tokens.css";
+@import "./reset.css" layer(reset);
+@import "./base.css" layer(base);
+
+@layer reset, base, page;
+
+@layer page {
+  main.color {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 24px;
+    margin-block: 24px;
+
+    .color-scheme-main, .color-scheme-surface {
+      flex: 1 1 0;
+    }
+
+    .color-scheme {
+      margin-block-end: 20px;
+    }
+
+    .color-scheme-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-block-end: 12px;
+
+      .main-scheme-item {
+          font: var(--md-sys-typescale-label-large);
+          letter-spacing: var(--md-sys-typescale-label-large-letter-spacing);
+
+          .bg {
+            block-size: 128px;
+            padding: 12px;
+          }
+
+          .fg {
+            block-size: 48px;
+            padding: 12px;
+          }
+      }
+    }
+
+    .color-scheme-surface {
+      display: flex;
+      flex-direction: column;
+      .row {
+        display: flex;
+
+        .color-item {
+          flex: 1 1 0;
+          font: var(--md-sys-typescale-label-large);
+          letter-spacing: var(--md-sys-typescale-label-large-letter-spacing);
+          min-block-size: 64px;
+        }
+      }
+    }
+    .tonal-palette {
+      margin-block-end: 12px;
+    }
+  }
+}
